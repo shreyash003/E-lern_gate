@@ -1,9 +1,408 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import "breakpoints";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-size: 10px;
+body {
+  font-size: 10px;
+}
+
+.navMainDiv {
+  width: 100vw;
+  height: 4rem;
+  position: fixed;
+  background-color: #34495e;
+  z-index: 1;
+  .navContHolder {
+    width: 97%;
+    height: 80%;
+    // background-color: tomato;
+    margin: 0.3rem auto;
+    display: flex;
+    .navLogo {
+      width: 4%;
+      height: 100%;
+      // background-color: thistle;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      @include sm {
+        display: none;
+      }
+    }
+    .navMenu {
+      width: 3rem;
+      height: 100%;
+      // background-color: thistle;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      i {
+        color: white;
+      }
+      @include sm {
+        display: flex;
+      }
+    }
+    .navLinks {
+      width: 40%;
+      height: 100%;
+      // background-color: teal;
+      @include md {
+        width: 60%;
+      }
+      @include lg {
+        width: 55%;
+        // background-color: #fff;
+      }
+      .navLinksCont {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a {
+          font-size: 1.3rem;
+          margin: 0 0.5rem;
+          color: white;
+          text-decoration: none;
+        }
+        @include sm {
+          display: none;
+        }
+        @include md {
+          // background-color: springgreen;
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .navLoginDiv {
+      width: 15%;
+      height: 100%;
+      // background-color: turquoise;
+      margin-left: auto;
+      display: flex;
+      position: relative;
+      @include md {
+        width: 25%;
+        // background-color: springgreen;
+      }
+      @include lg {
+        width: 20%;
+        // background-color: springgreen;
+      }
+      .navLogSign {
+        width: 70%;
+        height: 100%;
+        // background-color:thistle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          font-size: 1.3rem;
+          margin: 0 0.5rem;
+          color: white;
+          text-decoration: none;
+        }
+        @include sm {
+          display: none;
+        }
+      }
+      .navProfile {
+        position: absolute;
+        right: 0;
+        width: 3rem;
+        height: 100%;
+        // background-color: teal  ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .navCollapseDiv {
+    width: 100%;
+    height: 4rem;
+    background-color: #34495e;
+    text-align: left;
+    a {
+      width: 100%;
+      height: 80%;
+      // background-color: teal;
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      font-size: 1.3rem;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    right: 0px;
+  }
+  7% {
+    right: 0px;
+  }
+  14% {
+    right: 1400px;
+  }
+  21% {
+    right: 1400px;
+  }
+  28% {
+    right: 2800px;
+  }
+  35% {
+    right: 2800px;
+  }
+  42% {
+    right: 4210px;
+  }
+  56% {
+    right: 4210px;
+  }
+  63% {
+    right: 2800px;
+  }
+  70% {
+    right: 2800px;
+  }
+  84% {
+    right: 1400px;
+  }
+  91% {
+    right: 1400px;
+  }
+  98% {
+    right: 0px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes slides {
+  0% {
+    right: 0px;
+  }
+  7% {
+    right: 0px;
+  }
+  14% {
+    right: 365px;
+  }
+  21% {
+    right: 365px;
+  }
+  28% {
+    right: 730px;
+  }
+  35% {
+    right: 730px;
+  }
+  42% {
+    right: 1095px;
+  }
+  56% {
+    right: 1095px;
+  }
+  63% {
+    right: 730px;
+  }
+  70% {
+    right: 730px;
+  }
+  84% {
+    right: 365px;
+  }
+  91% {
+    right: 365px;
+  }
+  98% {
+    right: 0px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+.homeMainDiv {
+  width: 98.7vw;
+  height: 100%;
+  // background-color: teal;
+  overflow-x: hidden;
+  .homeSliderDiv {
+    width: 400%;
+    height: 89vh;
+    background-color: tan;
+    display: flex;
+    margin-top: 4rem;
+    position: relative;
+    animation: slide 38s linear 1s infinite forwards alternate;
+    @include sm {
+      display: none;
+      margin-top: 4rem;
+    }
+    @include md {
+      display: none;
+      margin-top: 4rem;
+    }
+    @include lg {
+      display: none;
+      margin-top: 4rem;
+    }
+  }
+  .slide1 {
+    width: 25%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.homeDetailsDiv {
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(44, 58, 71, 1) 98%
+  );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .homeDetailsTitle {
+    width: 100%;
+    height: 7rem;
+    // background-color: springgreen;
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1rem;
+    color: white;
+    @include sm {
+      margin-top: 4rem;
+    }
+    @include md {
+      margin-top: 4rem;
+    }
+    @include lg {
+      margin-top: 4rem;
+    }
+  }
+  .homeDetailsCont {
+    width: 100%;
+    height: 85rem;
+    // background-color: springgreen;
+    .homeDetails1 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin: 1rem 0;
+      .imgContainer {
+        width: 30%;
+        height: 100%;
+        float: left;
+        // background-color: steelblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 80%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      p {
+        width: 80%;
+        height: 100%;
+        // background-color: tan;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5rem;
+        font-size: 1.5rem;
+      }
+      @include sm {
+        flex-direction: column;
+        .imgContainer {
+          width: 100%;
+          height: 70%;
+          // background-color: steelblue;
+          img {
+            border-radius: 2rem;
+          }
+        }
+        p {
+          width: 100%;
+          height: 30%;
+          font-size: 1rem;
+        }
+      }
+      @include md {
+        flex-direction: column;
+        .imgContainer {
+          width: 100%;
+          height: 70%;
+          // background-color: steelblue;
+          img {
+            width: 60%;
+            border-radius: 2rem;
+          }
+        }
+        p {
+          width: 100%;
+          height: 30%;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.lecMainDiv {
+  position: absolute;
+  margin-top: 4rem;
+  width: 98.7vw;
+  height: 100vh;
+  background-color: yellowgreen;
+  .lecSubNav {
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    background-color: yellow;
+    display: flex;
+  }
+  .lecSubNavSec {
+    width: 50%;
+    height: 80%;
+    background-color: whitesmoke;
+    margin: 0.3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    p {
+      font-size: 1rem;
+    }
+    @include sm {
+      width: 100%;
+    }
+    @include md {
+      width: 80%;
+    }
+  }
+  .lecSubNavCol{
+    
+  }
 }
