@@ -1,17 +1,18 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, {  useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import logo from "../images/logo.jpg";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
-  Button,
   Collapse,
   IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
+
+
+
+
+
+
 
 const Navbar = () => {
   const [drop, setDrop] = useState(false);
@@ -58,24 +59,24 @@ const Navbar = () => {
             <section className="navLinks">
               <div className="navLinksCont">
                 {pages.map((val) => {
-                  return <NavLink to={val.path}>{val.name}</NavLink>;
+                  return <NavLink key={val.path} to={val.path}>{val.name}</NavLink>;
                 })}
               </div>
             </section>
             <section className="navLoginDiv">
               <div className="navLogSign">
                 <NavLink to="/login">Login</NavLink>
-                <NavLink to="/signin">Sign</NavLink>
+                <NavLink to="/signin">Sign</NavLink> 
               </div>
               <div className="navProfile">
                 <Avatar alt="profile" />
-              </div>
+              </div>  
             </section>
           </div>
           <Collapse in={drop} timeout="auto" unmountOnExit>
             {pages.map((val) => {
               return (
-                <div className="navCollapseDiv">
+                <div key={val.path} className="navCollapseDiv">
                   <NavLink exact to={val.path}>
                     {val.name}
                   </NavLink>

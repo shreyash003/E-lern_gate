@@ -69,6 +69,9 @@ const Home = () => {
             {details.map((val) => {
               return (
                 <div key={val.img}>
+                  <Divider>
+                    <Chip label={`${val.chip}`}></Chip>
+                  </Divider>
                   <div className="homeDetails1">
                     <div className="imgContainer">
                       <img src={val.img} alt="onlineLec"></img>
@@ -77,9 +80,6 @@ const Home = () => {
                       {val.details1} <br /> {val.details2}
                     </p>
                   </div>
-                  <Divider>
-                    <Chip label={`${val.chip}`}></Chip>
-                  </Divider>
                 </div>
               );
             })}

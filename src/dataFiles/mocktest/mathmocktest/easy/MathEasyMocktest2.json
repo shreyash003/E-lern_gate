@@ -1,0 +1,106 @@
+[
+    {
+        "name":"Math"
+    },
+    {
+        "id":"1",
+        "question":"../easy/math hardimg/21.png",
+        "answer":"a"
+    },
+    {
+        "id":"2",
+        "question":"../easy/math hardimg/22.png",
+        "answer":"d"
+    },
+    {
+        "id":"3",
+        "question":"../easy/math hardimg/23.png",
+        "answer":"a"
+    },
+    {
+        "id":"4",
+        "question":"../easy/math hardimg/24.png",
+        "answer":"a"
+    },
+    {
+        "id":"5",
+        "question":"../easy/math hardimg/25.png",
+        "answer":"a"
+    },
+    {
+        "id":"6",
+        "question":"../easy/math hardimg/26.png",
+        "answer":"d"
+    },
+    {
+        "id":"7",
+        "question":"../easy/math hardimg/27.png",
+        "answer":"c"
+    },
+    {
+        "id":"8",
+        "question":"../easy/math hardimg/28.png",
+        "answer":"c"
+    },
+    {
+        "id":"9",
+        "question":"../easy/math hardimg/29.png",
+        "answer":"a"
+    },
+    {
+        "id":"10",
+        "question":"../easy/math hardimg/30.png",
+        "answer":"a"
+    },
+    {
+        "id":"11",
+        "question":"../easy/math hardimg/31.png",
+        "answer":"b"
+    },
+    {
+        "id":"12",
+        "question":"../easy/math hardimg/32.png",
+        "answer":"c"
+    },
+    {
+        "id":"13",
+        "question":"../easy/math hardimg/33.png",
+        "answer":"a"
+    },
+    {
+        "id":"14",
+        "question":"../easy/math hardimg/34.png",
+        "answer":"b"
+    },
+    {
+        "id":"15",
+        "question":"../easy/math hardimg/35.png",
+        "answer":"b"
+    },
+    {
+        "id":"16",
+        "question":"../easy/math hardimg/36.png",
+        "answer":"c"
+    },
+    {
+        "id":"17",
+        "question":"../easy/math hardimg/37.png",
+        "answer":"c"
+    },
+    {
+        "id":"18",
+        "question":"../easy/math hardimg/38.png",
+        "answer":"c"
+    },
+    {
+        "id":"19",
+        "question":"../easy/math hardimg/39.png",
+        "answer":"a"
+    },
+    {
+        "id":"20",
+        "question":"../easy/math hardimg/40.png",
+        "answer":"c"
+    }
+   
+]
