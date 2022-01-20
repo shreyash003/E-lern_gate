@@ -375,8 +375,8 @@ body {
   position: absolute;
   margin-top: 4rem;
   width: 98.7vw;
-  height: 100vh;
-  background-color: yellowgreen;
+  height: 100%;
+  background-color: rgb(88, 92, 81);
   .lecSubNav {
     position: fixed;
     width: 100%;
@@ -427,22 +427,12 @@ body {
 
   .navSubCollapse {
     width: 100%;
-    height: 5rem;
-    margin-top: 3rem;
-    z-index: 3;
-    .navSubCollCont {
-      width: 100%;
-      height: 3rem;
-      background-color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      a {
-        font-size: 1rem;
-        color: black;
-        text-decoration: none;
-      }
-    }
+    background-color: aliceblue;
+    margin-top: 3rem ;
+    position: fixed;
+  
+    
+    
   }
   .lecDrawer {
     width: 25%;
@@ -466,7 +456,7 @@ body {
         justify-content: center;
         margin-bottom: 1rem;
         p {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
         }
       }
       .drawerAccordianContainer {
@@ -489,9 +479,14 @@ body {
         }
         .accordianSecondary{
           width: 100%;
-          p{
+          display: flex;
+          flex-direction: column;
+          a{
+            // background-color: blueviolet;
+            margin: .2rem 0;
             font-size: 1rem;
-            margin: .5rem 0;
+            color: black;
+            text-decoration: none;
           }
         }
        
@@ -502,8 +497,245 @@ body {
       width: 70%;
     }
   }
-
+  .lecContentDiv{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    margin-top: 0rem;
+    .lecHeaderDiv{
+      width: 100%;
+      height: 15%;
+      background-color: antiquewhite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+      p{
+        font-size: 2rem;
+      }
+    }
+    .lecContentContainer{
+      width: 100%;
+      // height: 100%;
+      background-color: #34495e;
+     .lecSubLinksContainer{
+       width: 80%;
+       height: 100%;
+       margin: 0 auto;
+      background-color: aquamarine;
+      display: flex;
+      flex-direction: column;
+      .lecSubName{
+        width: 100%;
+        height: 3rem;
+        background-color: blueviolet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+        p{
+          font-size: 2rem;
+        }
+      }
+      .lecSubTopicName{
+        width: 100%;
+        height: 2rem;
+        background-color:brown;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+        p{
+          font-size: 1.5rem;
+        }
+      }
+      .lecLinkContainer{
+        width: 100%;
+        height: 2.5rem;
+        background-color: burlywood;
+        display: flex;
+        margin-bottom: .5rem;
+        .linkIconDiv{
+          width: 15%;
+          height: 100%;
+          background-color: cadetblue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .linkTitleDiv{
+          width: 85%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          
+        }
+      }
+     }
+    }
+  }
   .lecDrawerOpen {
     transform: translateX(0%);
+  }
+
+  .toTop{
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+   
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    button {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: transparent;
+      outline: transparent;
+      font-size: 3rem;
+    }
+    @include sm{
+      right: -0.5rem;
+    }
+  }
+}
+
+.notesMainDiv{
+  position: absolute;
+  margin-top: 4rem;
+  width: 98.7vw;
+  height: 100%;
+  background-color: rgb(88, 92, 81);
+  display: flex;
+  flex-direction: column;
+  .notesSubBar{
+    width: 100%;
+    height: 3rem;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    .notesSubLinkContainer{
+      width: 50%;
+      height: 80%;
+      background-color: yellow;
+      margin: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      a{
+        font-size: 1rem;
+        color: black;
+        text-decoration: none;
+      }
+      @include sm{
+        display: none;
+      }
+      @include md {
+        width: 70%;
+      }
+
+    }
+    .notesSubButton{
+      display: none;
+      @include sm {
+        display: flex;
+      }
+    }
+  }
+  .notesSubCollapse{
+    width: 100%;
+    // height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    margin-top: 3rem;
+    position: fixed;
+   
+    p{
+      width: 100%;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .notesContentContainer{
+    width: 100%;
+    // height: 100%;
+    background-color: wheat;
+    margin-top: 3rem;
+    .notesContentTitle{
+      width: 100%;
+      height: 5rem;
+      background-color: violet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      p{
+        font-size: 2rem;
+      }
+    }
+    .notesContentLinksDiv{
+      width: 80%;
+      // height: 100%;
+      background-color:turquoise;
+      margin: 0 auto;
+      .notesSubDiv{
+        width: 100%;
+        // height: 100%;
+        background-color:tomato;
+        .notesSubName{
+          width: 100%;
+          height: 3rem;
+          background-color: thistle;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          p{
+            font-size: 2rem;
+          }
+          
+        }
+        .notesTopicDiv{
+          width: 100%;
+          height: 2rem;
+          background-color: turquoise;
+          display: flex;
+          margin: 1rem 0;
+          .notestopicIconDiv{
+            width: 15%;
+            height: 100%;
+            background-color:teal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+              width: 2rem;
+              height: 90%;
+            }
+          }
+          .notesTopicTitle{
+            width: 85%;
+            height: 100%;
+            background-color: tan;
+            display: flex;
+            align-items: center;
+            a{
+                font-size: 1rem;
+                color: black;
+                text-decoration: none;
+            }
+          }
+        }
+      }
+    }
   }
 }

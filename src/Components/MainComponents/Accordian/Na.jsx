@@ -1,15 +1,19 @@
 import React from 'react'
+import Na_ss  from "../../../dataFiles/videoLec/Network_signals_andSystems.json"
+import Accordian from './Accordian';
+
+
 
 const Na=() =>{
 return(
     <>
       <div className="drawerSubContainer">
             <div className="drawerSubName">
-              <p>Math</p>
+              <p id='0641'>Network Theory,Signals and System</p>
             </div>
-            <div className="drawerAccordianContainer">
-              
-            </div>
+            {Na_ss.map((val,index) => {
+          return <Accordian index={index} initial='1' key={val.topic} topic={val.topic} dataArr={val.title} />;
+        })}
           </div>
     </>)
 }

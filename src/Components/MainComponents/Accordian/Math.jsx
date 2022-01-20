@@ -9,8 +9,8 @@ const Math = () => {
         <div className="drawerSubName">
           <p>Math</p>
         </div>
-        {mathData.map((val) => {
-          return <Accordian key={val.topic} topic={val.topic} dataArr={val.title} />;
+        {mathData.map((val,index) => {
+          return <Accordian initial='0' index={index} key={val.topic} topic={val.topic} dataArr={val.title} />;
         })}
       </div>
     </>
