@@ -69,7 +69,7 @@ const Navbar = () => {
                 <NavLink to="/signin">Sign</NavLink> 
               </div>
               <div className="navProfile">
-                <Avatar alt="profile" />
+                <NavLink to='/profile' ><Avatar alt="profile" /></NavLink>
               </div>  
             </section>
           </div>
