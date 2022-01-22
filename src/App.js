@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "./Components/MainComponents/DatabaseComponents/Login/Login";
 import Profile from "./Components/MainComponents/DatabaseComponents/Profile/Profile";
+import ProfileEdit from "./Components/MainComponents/DatabaseComponents/Profile/ProfileEdit";
 import SignUp from "./Components/MainComponents/DatabaseComponents/signup/SignUp";
 import Home from "./Components/MainComponents/Home";
 import Notes from "./Components/MainComponents/Notes";
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/signin" element={<SignUp/>}  />
           <Route exact path="/login" element={<Login/>}  />
           <Route exact path="/profile" element={<Profile/>}  />
+          <Route exact path="/profile/edit" element={<ProfileEdit/>}  />
         </Routes>
     </>
   );
