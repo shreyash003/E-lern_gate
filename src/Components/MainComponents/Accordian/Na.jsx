@@ -4,7 +4,7 @@ import Accordian from './Accordian';
 
 
 
-const Na=() =>{
+const Na=({toggleDrawer}) =>{
 return(
     <>
       <div className="drawerSubContainer">
@@ -12,7 +12,7 @@ return(
               <p id='0641'>Network Theory,Signals and System</p>
             </div>
             {Na_ss.map((val,index) => {
-          return <Accordian index={index} initial='1' key={val.topic} topic={val.topic} dataArr={val.title} />;
+          return <Accordian toggleDrawer={toggleDrawer} index={index} initial='1' key={val.topic} topic={val.topic} dataArr={val.title} />;
         })}
           </div>
     </>)

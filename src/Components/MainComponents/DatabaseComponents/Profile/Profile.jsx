@@ -65,7 +65,7 @@ return(
             <section className='profileCardDiv'>
                     <div className='profileNameImgDiv' >
                         <section className='profileImg'>
-                            <img src={user.photoURL} alt='profile'></img>
+                            <img src={user.photoURL?user.photoURL:profile} alt='profile'></img>
                         </section>
                         <section className='profileName'>
                             <p>{`${name}`}</p>

@@ -1,7 +1,7 @@
 import { Collapse } from "@mui/material";
 import React, { useState } from "react";
 
-const Accordian = ({topic,dataArr,index,initial}) => {
+const Accordian = ({topic,dataArr,index,initial,toggleDrawer}) => {
 
   const [openAccordian,setOpenAccordian]=useState(false)
 
@@ -12,14 +12,16 @@ const Accordian = ({topic,dataArr,index,initial}) => {
     <>
       <div className="drawerAccordianContainer">
  
-        <div className="accordianPrimary"><p>{topic}{openAccordian?
+        <div  onClick={Accordian}  className="accordianPrimary"><p>{topic}{openAccordian?
         <i  onClick={Accordian}  className="fa fa-chevron-up fa-xs"></i>
         :<i onClick={Accordian} className="fa fa-chevron-down fa-xs"></i> }</p></div>
         <Collapse in={openAccordian} timeout="auto" unmountOnExit>
             <div className="accordianSecondary" >
             {dataArr.map((val,ind)=>{
               return(
-              <a href={`#${initial}${index}${ind}`}>{val}</a>
+                <div onClick={toggleDrawer} className="accordianSecondaryLink">
+                      <a href={`#${initial}${index}${ind}`}>{val}</a>
+                </div>
 
               )
             })}

@@ -413,24 +413,25 @@ body {
   margin-top: 4rem;
   width: 98.7vw;
   height: 100%;
-  background-color: rgb(88, 92, 81);
+  // background-color: rgb(88, 92, 81);
   .lecSubNav {
     position: fixed;
     width: 100%;
     height: 3rem;
-    background-color: yellow;
+    background-color: #273c75;
     display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     .lecSubNavSec {
       width: 50%;
       height: 80%;
-      background-color: whitesmoke;
+      // background-color: whitesmoke;
       margin: 0.3rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       a {
         font-size: 1rem;
-        color: black;
+        color: white;
         text-decoration: none;
       }
       @include sm {
@@ -443,7 +444,7 @@ body {
     .lecSubNavColl {
       width: 20%;
       height: 100%;
-      background-color: turquoise;
+      // background-color: turquoise;
       margin-left: 1.5rem;
       display: none;
       align-items: center;
@@ -472,56 +473,81 @@ body {
     width: 25%;
     height: 100%;
     position: fixed;
-    background-color: tan;
+    background-color: #273c75;
     margin-top: 3rem;
     transform: translateX(-100%);
     transition: 300ms linear 0ms;
     overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+
     .drawerSubContainer {
       width: 100%;
-      background-color: steelblue;
+      // background-color: steelblue;
       margin-top: 2rem;
       .drawerSubName {
         width: 100%;
         height: 2.5rem;
-        background-color: azure;
+        // background-color: azure;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
         p {
-          font-size: 1.4rem;
+          color: #007FFF;
+          font-size: 1.5rem;
         }
       }
       .drawerAccordianContainer {
         width: 100%;
-        background-color: blanchedalmond;
+        // background-color: blanchedalmond;
         .accordianPrimary {
           width: 100%;
           height: 2rem;
-          background-color: aquamarine;
+          // background-color: aquamarine;
           display: flex;
           align-items: center;
+          border-radius: .5rem;
           .fa {
             position: absolute;
             right: 1rem;
             margin-top: 0.3rem;
           }
           p {
-            font-size: 1.4rem;
+            color: white;
+            font-weight: 500;
+            font-size: 1.2rem;
+
+          }
+          &:hover{
+            background-color:#b1c0eca6 ;
           }
         }
         .accordianSecondary {
           width: 100%;
           display: flex;
           flex-direction: column;
-          a {
+          border-radius: .5rem;
+          margin: 1rem 0;
+          .accordianSecondaryLink{
+            margin: 0.2rem 0;
+            border-radius: .3rem;
+            a {
             // background-color: blueviolet;
             margin: 0.2rem 0;
             font-size: 1rem;
-            color: black;
+            color: #dcdde1;
             text-decoration: none;
+            }
+            &:hover{
+              background-color:#b1c0eca6  ;
+              a{
+                // color:#007FFF
+                color:white
+              }
+            }
+
           }
+         
         }
       }
     }
@@ -538,60 +564,64 @@ body {
     .lecHeaderDiv {
       width: 100%;
       height: 15%;
-      background-color: antiquewhite;
+      background-color: #273c75;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 2rem;
       p {
+        color: white;
         font-size: 2rem;
       }
     }
     .lecContentContainer {
       width: 100%;
       // height: 100%;
-      background-color: #34495e;
+      background-color: #273c75;
       .lecSubLinksContainer {
         width: 80%;
         height: 100%;
         margin: 0 auto;
-        background-color: aquamarine;
+        background-color: #273c75;
         display: flex;
         flex-direction: column;
         .lecSubName {
           width: 100%;
           height: 3rem;
-          background-color: blueviolet;
+          background-color: #273c75;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 1rem 0;
           p {
+            color: #00a8ff;
             font-size: 2rem;
           }
         }
         .lecSubTopicName {
           width: 100%;
           height: 2rem;
-          background-color: brown;
+          background-color: #7a92d3;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 2rem 0;
+          border-radius: .5rem;
           p {
+            color: white;
             font-size: 1.5rem;
           }
         }
         .lecLinkContainer {
           width: 100%;
           height: 2.5rem;
-          background-color: burlywood;
+          // background-color: burlywood;
           display: flex;
           margin-bottom: 0.5rem;
           .linkIconDiv {
             width: 15%;
             height: 100%;
-            background-color: cadetblue;
+            // background-color: cadetblue;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -641,27 +671,28 @@ body {
   margin-top: 4rem;
   width: 98.7vw;
   height: 100%;
-  background-color: rgb(88, 92, 81);
+  // background-color: rgb(88, 92, 81);
   display: flex;
   flex-direction: column;
   .notesSubBar {
     width: 100%;
     height: 3rem;
-    background-color: yellowgreen;
+    background-color: #273C75;
     display: flex;
     align-items: center;
     position: fixed;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     .notesSubLinkContainer {
       width: 50%;
       height: 80%;
-      background-color: yellow;
+      // background-color: yellow;
       margin: 0 2rem;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       a {
         font-size: 1rem;
-        color: black;
+        color: white;
         text-decoration: none;
       }
       @include sm {
@@ -699,51 +730,53 @@ body {
   .notesContentContainer {
     width: 100%;
     // height: 100%;
-    background-color: wheat;
+    background-color: #273C75;
     margin-top: 3rem;
     .notesContentTitle {
       width: 100%;
-      height: 5rem;
-      background-color: violet;
+      height: 7rem;
+      background-color: #273C75;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 2rem;
       p {
+        color: white;
         font-size: 2rem;
       }
     }
     .notesContentLinksDiv {
       width: 80%;
       // height: 100%;
-      background-color: turquoise;
+      // background-color: turquoise;
       margin: 0 auto;
       .notesSubDiv {
         width: 100%;
         // height: 100%;
-        background-color: tomato;
+        background-color: #273C75;
         .notesSubName {
           width: 100%;
           // height: 3rem;
-          background-color: thistle;
+          background-color: #273C75;
           display: flex;
           align-items: center;
           justify-content: center;
           margin-bottom: 1rem;
           p {
+            color: #74b9ff;
             font-size: 2rem;
           }
         }
         .notesTopicDiv {
           width: 100%;
           height: 2rem;
-          background-color: turquoise;
+          // background-color: turquoise;
           display: flex;
           margin: 1rem 0;
           .notestopicIconDiv {
             width: 15%;
             height: 100%;
-            background-color: teal;
+            // background-color: teal;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -755,12 +788,12 @@ body {
           .notesTopicTitle {
             width: 85%;
             height: 100%;
-            background-color: tan;
+            // background-color: tan;
             display: flex;
             align-items: center;
             a {
-              font-size: 1rem;
-              color: black;
+              font-size: 1.5rem;
+              color: white;
               text-decoration: none;
             }
           }
