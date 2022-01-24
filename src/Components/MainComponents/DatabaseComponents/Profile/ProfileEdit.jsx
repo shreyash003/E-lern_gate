@@ -78,19 +78,19 @@ return(
                     </div>
                     <div className='profileEditCardContent'>
                         <label><p>Name:</p>
-                            <input type='text' defaultValue={name}></input>
+                            <input id='editName' type='text' defaultValue={name}></input>
                         </label><br/>
                         <label><p>Email:</p> 
-                            <input type='email' defaultValue={email} disabled={true} ></input>
+                            <input id='editName' type='email' defaultValue={email} disabled={true} ></input>
                         </label><br/>
                         <label><p>Phone Number :</p>
-                            <input type='tel' defaultValue={phoneNo}></input>
+                            <input  id='editPhone' type='tel' defaultValue={phoneNo}></input>
                         </label><br/>
                         <label><p>Collage Name : </p>  
-                            <input type='text' defaultValue={clgName}></input>
+                            <input id='editClgName' type='text' defaultValue={clgName}></input>
                         </label><br/>
                         <label><p>Profile Image :</p>
-                            <input onChange={UploadFile} type='file' ></input>
+                            <input id='editImg' onChange={UploadFile} type='file' ></input>
                         </label><br/>
                         <NavLink to='/profile'><Button onClick={submit} sx={{ml:2}} variant='contained'>Submit</Button></NavLink>
                     </div>

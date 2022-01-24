@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useRef } from "react";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import IconButton from "@mui/material/IconButton";
 import { Collapse } from "@mui/material";
@@ -16,6 +16,7 @@ import ClickAwayListener from 'react-click-away-listener';
 
 const VideoLec = () => {
   const [subColl, setSubColl] = useState(false);
+
   const [drawer, setDrawer] = useState(true);
 
  
@@ -38,7 +39,7 @@ const VideoLec = () => {
   const handleListner=()=>{
     const Drawer = document.querySelector(".lecDrawer");
     
-    if(!drawer){
+    if(drawer){
       Drawer.classList.remove("lecDrawerOpen");
       
     }
@@ -48,6 +49,7 @@ const VideoLec = () => {
   const [show,setShow]=useState(false);
 
   const onScroll=()=>{
+    // console.log(window.scrollY)
     if(window.scrollY>330){
       setShow(true)
     }else{
@@ -61,7 +63,8 @@ const VideoLec = () => {
       behavior: 'smooth',
     });
   }
-  
+ 
+
 
   
   useEffect(()=>{
@@ -80,7 +83,15 @@ const VideoLec = () => {
     })
   },[])
 
-
+  function scrollToele(e) { 
+    const offy=e.target.id
+    window.scrollTo({
+      top: offy,
+      behavior: 'smooth',
+    });
+  }
+ 
+  
   return (
     <>
       <main role="main" className="lecMainDiv">
@@ -95,10 +106,10 @@ const VideoLec = () => {
             </IconButton>
           </section>
           <section className="lecSubNavSec">
-            <a href="#top">Maths</a>
-            <a href="#0640">Network Analysis Signals and Systems</a>
-            <a href="#a">Analog Circuits</a>
-            <a href="#a">Electronic Devices</a>
+            <p id='80' onClick={scrollToele}>Maths</p>
+            <p id='8473' onClick={scrollToele} >Network Analysis Signals and Systems</p>
+            <p>Analog Circuits</p>
+            <p>Electronic Devices</p>
           </section>
           <div className="lecSubNavColl">
             <button type="button" onClick={openSubColl}>
@@ -106,7 +117,7 @@ const VideoLec = () => {
             </button>
           </div>
         </nav>
-          <Collapse onClickAway={openSubColl} in={false} timeout="200" unmountOnExit>
+          <Collapse  in={subColl} timeout="auto" unmountOnExit>
         <div className="navSubCollapse">
               <Button onClick={openSubColl} sx={{display:'block',color:"black",mb:2,width:"100%",textAlign:"left",height:"3rem"}}>Home</Button>
               <Button onClick={openSubColl}   sx={{display:'block',color:"black",mb:2,width:"100%",textAlign:"left",height:"3rem"}}>Video Lec</Button>
@@ -116,13 +127,11 @@ const VideoLec = () => {
           </Collapse>
 
 
-      <ClickAwayListener onClickAway={handleListner}>
 
         <div  className="lecDrawer">
           <Math toggleDrawer={toggleDrawer}  />
           <Na  toggleDrawer={toggleDrawer}/>
         </div>
-			</ClickAwayListener>
 
 
       <div className="lecContentDiv">

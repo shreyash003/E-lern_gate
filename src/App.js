@@ -4,6 +4,7 @@ import Profile from "./Components/MainComponents/DatabaseComponents/Profile/Prof
 import ProfileEdit from "./Components/MainComponents/DatabaseComponents/Profile/ProfileEdit";
 import SignUp from "./Components/MainComponents/DatabaseComponents/signup/SignUp";
 import Home from "./Components/MainComponents/Home";
+import Mocktest from "./Components/MainComponents/MockTest/Mocktest";
 import Notes from "./Components/MainComponents/Notes";
 import VideoLec from "./Components/MainComponents/VideoLec";
 import Navbar from "./Components/Navbar";
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/VideoLec" element={<VideoLec/>}  />
           <Route exact path="/Notes" element={<Notes/>}  />
           <Route exact path="/signin" element={<SignUp/>}  />
+          <Route exact path="/mockk_test" element={<Mocktest/>}  />
           <Route exact path="/login" element={<Login/>}  />
           <Route exact path="/profile" element={<Profile/>}  />
           <Route exact path="/profile/edit" element={<ProfileEdit/>}  />

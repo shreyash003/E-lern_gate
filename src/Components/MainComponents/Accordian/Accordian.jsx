@@ -19,7 +19,7 @@ const Accordian = ({topic,dataArr,index,initial,toggleDrawer}) => {
             <div className="accordianSecondary" >
             {dataArr.map((val,ind)=>{
               return(
-                <div onClick={toggleDrawer} className="accordianSecondaryLink">
+                <div key={ind} onClick={toggleDrawer} className="accordianSecondaryLink">
                       <a href={`#${initial}${index}${ind}`}>{val}</a>
                 </div>
 
