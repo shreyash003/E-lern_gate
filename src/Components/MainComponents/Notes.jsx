@@ -4,6 +4,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Collapse } from "@mui/material";
 import NotesMath from "./notesMainFiles/NotesMath";
 import NotesNa from "./notesMainFiles/NotesNa";
+import NotesAc from "./notesMainFiles/NotesAc";
+import NotesEdc from "./notesMainFiles/NotesEdc";
 
 const Notes = () => {
   const [subColl, setSubColl] = useState(false);
@@ -19,8 +21,8 @@ const Notes = () => {
                     <div className="notesSubLinkContainer">
                             <a href="#mathNotes">Maths</a>
                             <a href="#naNotes">Network Analysis Signals and System</a>
-                            <a href="#a">Analog Circuits</a>
-                            <a href="#a">Electronic Devices</a>
+                            <a href="#acNotes">Analog Circuits</a>
+                            <a href="#edcNotes">Electronic Devices</a>
                     </div>
                     <section className="notesSubButton">
                              <Button
@@ -50,6 +52,8 @@ const Notes = () => {
                 <div className="notesContentLinksDiv">
                         <NotesMath/>
                         <NotesNa/>
+                        <NotesAc/>
+                        <NotesEdc/>
                 </div>
         </section>
       </main>

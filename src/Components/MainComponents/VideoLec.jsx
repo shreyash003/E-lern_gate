@@ -5,8 +5,12 @@ import { Collapse } from "@mui/material";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import Math from "./Accordian/Math";
 import Na from "./Accordian/Na";
+import Ac from "./Accordian/Ac";
+import Edc from "./Accordian/Edc";
 import MainMath from "./lecMainFiles/MainMath";
 import NaMain from "./lecMainFiles/NaMain";
+import AcMain from "./lecMainFiles/AcMain";
+import MainEdc from "./lecMainFiles/MainEdc";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import Button from "@mui/material/Button";
 import ClickAwayListener from 'react-click-away-listener';
@@ -108,8 +112,8 @@ const VideoLec = () => {
           <section className="lecSubNavSec">
             <p id='80' onClick={scrollToele}>Maths</p>
             <p id='8473' onClick={scrollToele} >Network Analysis Signals and Systems</p>
-            <p>Analog Circuits</p>
-            <p>Electronic Devices</p>
+            <p onClick={scrollToele}>Analog Circuits</p>
+            <p onClick={scrollToele}>Electronic Devices</p>
           </section>
           <div className="lecSubNavColl">
             <button type="button" onClick={openSubColl}>
@@ -131,6 +135,8 @@ const VideoLec = () => {
         <div  className="lecDrawer">
           <Math toggleDrawer={toggleDrawer}  />
           <Na  toggleDrawer={toggleDrawer}/>
+          <Ac toggleDrawer={toggleDrawer}/>
+          <Edc toggleDrawer={toggleDrawer}/>
         </div>
 
 
@@ -141,6 +147,8 @@ const VideoLec = () => {
             <section className="lecContentContainer">
                 <MainMath/>
                 <NaMain/>
+                <AcMain/>
+                <MainEdc/>
             </section>
       </div>
         <div className="toTop">
