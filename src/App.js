@@ -8,6 +8,7 @@ import Mocktest from "./Components/MainComponents/MockTest/Mocktest";
 import Notes from "./Components/MainComponents/Notes";
 import VideoLec from "./Components/MainComponents/VideoLec";
 import Navbar from "./Components/Navbar";
+import About from "./Components/About";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/login" element={<Login/>}  />
           <Route exact path="/profile" element={<Profile/>}  />
           <Route exact path="/profile/edit" element={<ProfileEdit/>}  />
+          <Route exact path="/About" element={<About/>} />
         </Routes>
     </>
   );
